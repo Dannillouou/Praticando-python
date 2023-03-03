@@ -16,3 +16,5 @@ print(variables.AC_GRAVIDADE)
 print(variables.abelha)
 
 #alteracao arquivo
+
+print("teste")
