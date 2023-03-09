@@ -4,17 +4,30 @@
 import variables
 
 #multiplos valores para multiplas variaveis
+print("Variáveis aleatórias")
 a, b, c, d = 5, 3.2, 'Hello', None
 print(a)  # prints 5
 print(b)  # prints 3.2
 print(c)  # prints Hello
 print(d)  # prints none
-
+print("\n")
+print("\n")
 #printando as variaveis do arquivo de variaveis
+print("Variáveis do arquivo de variáveis")
 print(variables.PI)
 print(variables.AC_GRAVIDADE)
 print(variables.abelha)
+print("\n")
+print("\n")
 
-#alteracao arquivo
+#TIpos de variáveis
+print("Tipos de variáveis")
+num1 = 5
+print(num1, type(num1))
 
-print("teste")
+num2 = 2.0
+print(num2, type(num2))
+
+num3 = 1+2j
+#a parte complexa é feita com "j"
+print(num3, type(num3))
