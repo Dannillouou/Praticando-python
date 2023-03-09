@@ -45,6 +45,7 @@ for linguagem in linguagens:
 print(linguagens)
 print(type(linguagens))
 
+print("\n")
 #Tupla
 #lista: com [], tupla: com ()
 materias = ('AEDV', 'ICD', 'IC', 'Cálculo', 'GA')
@@ -54,3 +55,10 @@ for materia in materias:
 
 print(materias)
 print(type(materias))
+print("\n")
+print("\n")
+
+#string
+string = 'Isso é uma string'
+print(string)
+
