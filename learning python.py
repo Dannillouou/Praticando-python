@@ -20,7 +20,8 @@ print(variables.abelha)
 print("\n")
 print("\n")
 
-#TIpos de variáveis
+#Tipos de variáveis
+#Numéricos
 print("Tipos de variáveis")
 num1 = 5
 print(num1, type(num1))
@@ -31,3 +32,25 @@ print(num2, type(num2))
 num3 = 1+2j
 #a parte complexa é feita com "j"
 print(num3, type(num3))
+
+print("\n")
+
+#Lista
+print("Lista")
+linguagens = ["swift", "java", "python", "c", "html", "css", "php", "dart"]
+#acessando
+for linguagem in linguagens:
+    print(linguagem)
+
+print(linguagens)
+print(type(linguagens))
+
+#Tupla
+#lista: com [], tupla: com ()
+materias = ('AEDV', 'ICD', 'IC', 'Cálculo', 'GA')
+
+for materia in materias:
+    print(materia)
+
+print(materias)
+print(type(materias))
