@@ -36,7 +36,8 @@ print(num3, type(num3))
 print("\n")
 
 #Lista
-print("Lista")
+#lista
+print("Listas são sequencias de dados. Em python tanto seus elementos quanto sua ordem são mutáveis")
 linguagens = ["swift", "java", "python", "c", "html", "css", "php", "dart"]
 #acessando
 for linguagem in linguagens:
@@ -48,6 +49,7 @@ print(type(linguagens))
 print("\n")
 #Tupla
 #lista: com [], tupla: com ()
+print("Uma tupla é uma lista imutável")
 materias = ('AEDV', 'ICD', 'IC', 'Cálculo', 'GA')
 
 for materia in materias:
@@ -61,4 +63,30 @@ print("\n")
 #string
 string = 'Isso é uma string'
 print(string)
+
+print("\n")
+
+#set
+print("Um set (conjunto) é uma lista que os elementos não mudam, não tem ordem e as duplicações são consideradas como um elemento so:")
+matriculas = {190343, 190443, 190572, 190847, 190567, 190981}
+for matricula in matriculas:
+    print(matricula)
+
+print(matriculas)
+print(type(matriculas))
+print("\n")
+print("\n")
+
+#dictionary
+print("Dicionário é uma lista de itens que são identificados por uma chave, que serve como seu índice:")
+
+estados = {'MG': 'Beaga', 'RJ': 'Rio de Janeiro', 'SP': 'São Paulo', 'ES': 'Vitória'}
+print(estados)
+print(estados['MG'])
+chaves = estados.keys()
+print('printando chaves:')
+
+for (estado, cidade) in zip(chaves, estados):
+    print(estado, ' | ', cidade)
+print(type(estados))
 
