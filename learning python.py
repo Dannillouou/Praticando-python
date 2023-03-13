@@ -147,9 +147,14 @@ for cidade, estado in zip(estadosList, chaves):
 print(type(estados))
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#print avançado
+#input e output
+#print "avançado"
 #sep padrão= ' '
 #end padrão= '\n'
 print('printizinho de cria', 2023, 'muito foda', c, sep=',', end='\n\n')
 print('printizinho de cria', 2023, 'muito foda e esse sem end', c, sep=', ')
 print('printizinho de cria sem sep', 2023, 'muito foda', c,)
+
+#input
+receber = input('Digite algo: ')
+print(receber)
