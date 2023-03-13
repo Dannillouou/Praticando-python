@@ -200,8 +200,8 @@ my_function()
 print(global_var)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Estruturas de repetição
 #usando else if
-
 number = 0
 
 if number > 0:
@@ -215,9 +215,7 @@ else:
 #usando emoji
 print('Pyhton usa elif mano que trem feio \U0001F922')
 
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Usando for
-
 #Iterando de 0 a 5
 #fu
 for i in range(5):
@@ -225,9 +223,7 @@ for i in range(5):
 else:
     print(f"Loop terminou")
 
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Usando while
-
 contador = 0
 
 while contador < 3:
@@ -242,3 +238,15 @@ while contador < 3:
     contador = contador + 1
 else:
     print('Conseguiu terminar!')
+
+#Usando continue
+#programa pra printar apenas números pares
+num = 0
+
+while num < 10:
+    num += 1
+    
+    if (num % 2) == 0:
+        continue
+
+    print(num)
