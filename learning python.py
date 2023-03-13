@@ -198,3 +198,19 @@ my_function()
 
 # print the modified value of the global variable
 print(global_var)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#usando else if
+
+number = 0
+
+if number > 0:
+    print("Positive number")
+
+elif number == 0:
+    print('Zero')
+else:
+    print('Negative number')
+
+#usando emoji
+print('Pyhton usa elif mano que trem feio \U0001F922')
