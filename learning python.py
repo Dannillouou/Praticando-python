@@ -1,18 +1,17 @@
-# comentários são feitos assim
+#Comentários são feitos assim
+#Arquivozinho de cria pra anotar varias coisas uteis de python p usar
 
-#importando arquivos de variáveis
+#importando arquivo de variáveis
 import variables
 
-#multiplos valores para multiplas variaveis
-print("Variáveis aleatórias")
-a, b, c, d = 5, 3.2, 'Hello', None
-print(a)  # prints 5
-print(b)  # prints 3.2
-print(c)  # prints Hello
-print(d)  # prints none
-print("\n")
-print("\n")
-#printando as variaveis do arquivo de variaveis
+#Criando a melhor função possível p começar bem:
+def saudacao():
+    print("Hello world!")
+
+saudacao()
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Usando arquivo com variaveis salva por fora
 print("Variáveis do arquivo de variáveis")
 print(variables.PI)
 print(variables.AC_GRAVIDADE)
@@ -36,9 +35,7 @@ print(num3, type(num3))
 print("\n")
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#Lista
-#lista
+#Usando a grande de famigerada lista
 print("Listas são sequencias de dados. Em python tanto seus elementos quanto sua ordem são mutáveis")
 linguagens = ["swift", "java", "python", "c", "html", "css", "php", "dart"]
 #acessando
@@ -79,12 +76,12 @@ print('python' in linguagens)
 #tamanho da lista
 print('Tamanho da lista: ', len(linguagens))
 
+#printando tipo da lista
 print(type(linguagens))
-
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#As tuplas, um tipo diferente de lista
 
 print("\n")
-#Tupla
 #lista: com [], tupla: com ()
 print("Uma tupla é uma lista imutável")
 materias = ('AEDV', 'ICD', 'IC', 'Cálculo', 'GA', 'IC')
@@ -100,21 +97,12 @@ print(materias.count('IC'))  #printa o número de vezes que o elemento aparece
 print(materias.index('IC')) #printa a primeira ocorrência do elemento
 
 print(materias)
+#Printando o tipo
 print(type(materias))
 print("\n")
 print("\n")
-
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#string
-string = 'Isso é uma string'
-print(string)
-
-print("\n")
-
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#set
+#Usando conjuntos em cobrinha
 print("Um set (conjunto) é uma lista que os elementos não mudam, não tem ordem e as duplicações são consideradas como um elemento so:")
 matriculas = {190343, 190443, 190572, 190847, 190567, 190981}
 for matricula in matriculas:
@@ -128,8 +116,7 @@ print("\n")
 print("\n")
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#dictionary
+#Dicionário, a lista mai doidera que tem
 print("Dicionário é uma lista de itens que são identificados por uma chave, que serve como seu índice:")
 
 estados = {'MG': 'Beaga', 'RJ': 'Rio de Janeiro', 'SP': 'São Paulo', 'ES': 'Vitória'}
@@ -147,20 +134,21 @@ for cidade, estado in zip(estadosList, chaves):
 print(type(estados))
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#input e output
+#Input e output na cobrinha
+
 #print "avançado"
 #sep padrão= ' '
 #end padrão= '\n'
-print('printizinho de cria', 2023, 'muito foda', c, sep=',', end='\n\n')
-print('printizinho de cria', 2023, 'muito foda e esse sem end', c, sep=', ')
-print('printizinho de cria sem sep', 2023, 'muito foda', c,)
+print('printizinho de cria', 2023, 'muito foda', variables.hello, sep=',', end='\n\n')
+print('printizinho de cria', 2023, 'muito foda e esse sem end', variables.hello, sep=', ')
+print('printizinho de cria sem sep', 2023, 'muito foda', variables.hello,)
 
 #input
 receber = input('Digite algo: ')
 print(receber)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#operadores doidera de comparação
+#Operadores doidera de comparação
 x = 'Hello world'
 y = {1:'a', 2:'b'}
 
@@ -178,8 +166,7 @@ print('a' in y)  # prints False
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Usando variável global 
-
-# define global variable 
+#define global variable 
 global_var = 10
 
 def my_function():
@@ -252,10 +239,26 @@ while num < 10:
     print(num)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Usamos a palavra-chave pass para permitir que um bloco de código com algo 
+#que ainda vai ser feito execute, mesmo sem fazer nada, sem gerar um erro, como de identação, por exemplo
 n = 11
 
-# use pass inside if statement
 if n > 10:
     pass
 
-print('Hello')
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Funções
+#criar função com valores padrões
+def subtraiNumeros(a = 10,  b = 8):
+    sum = a - b
+    print('Sum:', sum)
+
+#chamando com dois argumentos
+adicionaNumeros(5, 3)#printa 2
+
+#chamando com um argumento
+#o outro vai pelo automático
+adicionaNumeros(a = 20)#printa 12
+
+#chamando argumento
+adicionaNumeros()#printa 2
