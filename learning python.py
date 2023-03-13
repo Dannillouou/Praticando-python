@@ -214,3 +214,13 @@ else:
 
 #usando emoji
 print('Pyhton usa elif mano que trem feio \U0001F922')
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Usando for
+
+#Iterando de 0 a 5
+#fu
+for i in range(5):
+    print(f"Valor do for: {i}")
+else:
+    print(f"Loop terminou")
