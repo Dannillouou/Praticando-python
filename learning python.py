@@ -224,3 +224,21 @@ for i in range(5):
     print(f"Valor do for: {i}")
 else:
     print(f"Loop terminou")
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Usando while
+
+contador = 0
+
+while contador < 3:
+    if contador == 2:
+    #quando usa um break, todo o loop para
+    #o else só é executado quando a condição do while é falsa
+    #então, se é utilizado um break, o else é ignorado
+        print("Aqui paramo")
+        break
+
+    print(f'{contador} Dentro do loop')
+    contador = contador + 1
+else:
+    print('Conseguiu terminar!')
