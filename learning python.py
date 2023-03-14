@@ -285,3 +285,25 @@ saudarUsuario(nome)
 
 #funções lambdas podem ser usadas como uma função de uma única
 #expressão que pode mudar ligeiramente sua funcionalidade dentro de funções maiores
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Variável não-local
+
+#função de fora 
+def fora():
+    message = 'local'
+
+    #função de dentro  
+    def dentro():
+        #variável não-local
+        nonlocal message
+
+        message = 'não-local'
+        print("drento:", message)
+
+    dentro()
+    print("fora:", message)
+
+fora()
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
