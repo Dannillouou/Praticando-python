@@ -254,11 +254,11 @@ def subtraiNumeros(a = 10,  b = 8):
     print('Sum:', sum)
 
 #chamando com dois argumentos
-adicionaNumeros(5, 3)#printa 2
+subtraiNumeros(5, 3)#printa 2
 
 #chamando com um argumento
 #o outro vai pelo automático
-adicionaNumeros(a = 20)#printa 12
+subtraiNumeros(a = 20)#printa 12
 
 #chamando argumento
-adicionaNumeros()#printa 2
+subtraiNumeros()#printa 2
