@@ -262,3 +262,26 @@ subtraiNumeros(a = 20)#printa 12
 
 #chamando argumento
 subtraiNumeros()#printa 2
+
+#Recursividade
+def fatorial(x):
+    """Função recursiva para calcular o valor de um fatorial"""
+
+    if x == 1:
+        return x
+    else:
+        return (x * fatorial(x-1))
+
+#A profundidade máxima é de 1000 recursividades, após isso o python corta para evitar recursividade infinita
+num = 100
+print("O fatorial de", num, "é: ", fatorial(num))
+
+#função lambda
+nome = input("Qual o seu nome? ")
+#lambda que aceita um argumento
+saudarUsuario = lambda Lamb_nome : print('Bom dia, ', Lamb_nome, '!')
+#chamando lambda
+saudarUsuario(nome)
+
+#funções lambdas podem ser usadas como uma função de uma única
+#expressão que pode mudar ligeiramente sua funcionalidade dentro de funções maiores
