@@ -2,7 +2,7 @@
 #Arquivozinho de cria pra anotar varias coisas uteis de python p usar
 
 #importando arquivo de variáveis
-import variables
+"""import variables
 #importando arquivo com funções
 import functions as func
 #importando todos trens do package de matemática
@@ -320,8 +320,8 @@ print(0o15)  # printa 13 em octal
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # multiline string 
 rickRoll = """
-Never gonna give you up
-Never gonna let you down
+"""Never gonna give you up
+Never gonna let you down"""
 """
 
 print(rickRoll)
@@ -348,4 +348,57 @@ for letter in greet:
 print(len(greet))
 
 print('a' in 'program') #Como se tivesse um if implicito, printa true
-print('at' not in 'battle') #Printa false, pois olha se não tem "at" em "battle"
+print('at' not in 'battle') #Printa false, pois olha se não tem "at" em "battle"""
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#brincando com arquivos
+
+try: #tenta executar
+  #Tratamento de exceção é uma boa prática, pois nem sempre a
+  #abertura de arquivos pode funcionar
+  
+  #abrindo arquivo - retorna um objeto de arquivo
+  #padrão read - r
+  #modos: r - leitura, w - escrita, a - append
+  arquivo = open("coltec.txt", "r")
+
+  conteudo = arquivo.read(6)
+  print(conteudo)
+
+  maisConteudo = arquivo.read(5)
+  print(maisConteudo)
+finally: #sempre é executado no fim
+  arquivo.close
+
+with open("coltecEscreve.txt", "w") as coltec:
+  #A função with faz o tratamento de exceção especificamente 
+  #para arquivos abertos, fazendo o try e colocando o 
+  #fechamento no finally
+  
+  coltec.write("Coltec!\n")
+  coltec.write("ELITEEEE")
+
+with open("coltecEscreve.txt", "r+") as coltec:
+  #A função with faz o tratamento de exceção especificamente 
+  #para arquivos abertos, fazendo o try e colocando o 
+  #fechamento no finally
+  
+  mensagem = input("O que você tem a dizer sobre o coltec? ")
+  coltec.write("\n\nMensagem para o coltec do usuário:")
+  coltec.write("\n" + mensagem)
+
+  #voltando para o começo do arquivo para poder lê-lo:
+  arquivo.seek(0)
+  
+  linhas = coltec.readlines()
+  #recupera lista com todas as linhas
+  print(linhas)
+
+  #de novo...
+  arquivo.seek(0)
+  
+  #Printando lista de linhas no arquivo
+  linhas.append("Desculpa repeti a mensagem tava muito emocionado e com sono, nem vi")
+  coltec.writelines(linhas)
+
+#funcionou quase como o esperado, mas deu p entender a ideia
