@@ -304,3 +304,48 @@ funcoes = dir (func)
 
 #listar as variaveis modulos e os caralha4
 print(dir())
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Usando outras bases decimais
+print(0b1101011)  # printa 107 em binário
+
+print(0xFB + 0b10)  # soma hexadecimal com binpario = printa 253
+
+print(0o15)  # printa 13 em octal
+
+#binário: 0b ou 0B
+#octal: 0o ou 00
+#hexadecimal: 0x ou 0X
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# multiline string 
+rickRoll = """
+Never gonna give you up
+Never gonna let you down
+"""
+
+print(rickRoll)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#brincando com strings
+#Concatenando strings
+greet = "Hello, "
+name = "Jack"
+
+#usando o operador +
+result = greet + name
+print(result)
+
+greet = 'Hello'
+#iterando através string greet
+#as strings funcionam como uma lista de caracteres
+for letter in greet:
+    print(letter)
+
+    greet = 'Hello'
+
+#Contando a quantidade de caracetres, o comprimento, da string
+print(len(greet))
+
+print('a' in 'program') #Como se tivesse um if implicito, printa true
+print('at' not in 'battle') #Printa false, pois olha se não tem "at" em "battle"
