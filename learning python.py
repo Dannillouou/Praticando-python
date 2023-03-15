@@ -3,10 +3,16 @@
 
 #importando arquivo de variáveis
 import variables
-import functions
+#importando arquivo com funções
+import functions as func
+#importando todos trens do package de matemática
+from math import *
+#parece ser problemático, pois acaba que meio que são criadas várias variáveis com so valores de dentro do import
+
+#modulos e packages --> modulos são o arquivo py, enquanto o package é tem o arquivo __init__
 
 #Criando a melhor função possível p começar bem:
-functions.saudacao()
+func.saudacao()
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Usando arquivo com variaveis salva por fora
@@ -14,6 +20,7 @@ print("Variáveis do arquivo de variáveis")
 print(variables.PI)
 print(variables.AC_GRAVIDADE)
 print(variables.abelha)
+print(f"Torta? {pi}") #usando o pi definido em math
 print("\n")
 print("\n")
 
@@ -247,18 +254,18 @@ if n > 10:
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Funções
 #chamando com dois argumentos
-functions.subtraiNumeros(5, 3)#printa 2
+func.subtraiNumeros(5, 3)#printa 2
 
 #chamando com um argumento
 #o outro vai pelo automático
-functions.subtraiNumeros(a = 20)#printa 12
+func.subtraiNumeros(a = 20)#printa 12
 
 #chamando argumento
-functions.subtraiNumeros()#printa 2
+func.subtraiNumeros()#printa 2
 
 #A profundidade máxima é de 1000 recursividades, após isso o python corta para evitar recursividade infinita
 num = 100
-print("O fatorial de", num, "é: ", functions.fatorial(num))
+print("O fatorial de", num, "é: ", func.fatorial(num))
 
 #função lambda
 nome = input("Qual o seu nome? ")
@@ -291,3 +298,9 @@ def fora():
 fora()
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#brincando com modules
+#listar os bgl dentro de um modulo
+funcoes = dir (func)
+
+#listar as variaveis modulos e os caralha4
+print(dir())
