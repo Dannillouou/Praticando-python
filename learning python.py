@@ -3,12 +3,10 @@
 
 #importando arquivo de variáveis
 import variables
+import functions
 
 #Criando a melhor função possível p começar bem:
-def saudacao():
-    print("Hello world!")
-
-saudacao()
+functions.saudacao()
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Usando arquivo com variaveis salva por fora
@@ -248,33 +246,19 @@ if n > 10:
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Funções
-#criar função com valores padrões
-def subtraiNumeros(a = 10,  b = 8):
-    sum = a - b
-    print('Sum:', sum)
-
 #chamando com dois argumentos
-subtraiNumeros(5, 3)#printa 2
+functions.subtraiNumeros(5, 3)#printa 2
 
 #chamando com um argumento
 #o outro vai pelo automático
-subtraiNumeros(a = 20)#printa 12
+functions.subtraiNumeros(a = 20)#printa 12
 
 #chamando argumento
-subtraiNumeros()#printa 2
-
-#Recursividade
-def fatorial(x):
-    """Função recursiva para calcular o valor de um fatorial"""
-
-    if x == 1:
-        return x
-    else:
-        return (x * fatorial(x-1))
+functions.subtraiNumeros()#printa 2
 
 #A profundidade máxima é de 1000 recursividades, após isso o python corta para evitar recursividade infinita
 num = 100
-print("O fatorial de", num, "é: ", fatorial(num))
+print("O fatorial de", num, "é: ", functions.fatorial(num))
 
 #função lambda
 nome = input("Qual o seu nome? ")
