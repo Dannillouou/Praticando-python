@@ -2,6 +2,8 @@
 #Arquivozinho de cria pra anotar varias coisas uteis de python p usar
 
 #importando arquivo de variáveis
+#Import para manipulação dos arquivos do sistema
+import os
 """import variables
 #importando arquivo com funções
 import functions as func
@@ -402,3 +404,21 @@ with open("coltecEscreve.txt", "r+") as coltec:
   coltec.writelines(linhas)
 
 #funcionou quase como o esperado, mas deu p entender a ideia
+
+#Manipulando diretórios
+# change directory
+os.chdir('E:\\Users\B51995')
+diretorioAtual = os.getcwd()
+print(diretorioAtual)
+
+listaDiscoC = os.listdir('C:\\')
+print(listaDiscoC)
+
+os.chdir(diretorioAtual + '\Desktop')
+#criando diretorio
+os.mkdir('teste')
+os.rename('teste', 'novoDir')
+os.chdir('novoDir')
+
+arquivo = open("testezin", "w")
+arquivo.write('Arquivo novo p deletar fodas')
