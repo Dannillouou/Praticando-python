@@ -420,5 +420,8 @@ os.mkdir('teste')
 os.rename('teste', 'novoDir')
 os.chdir('novoDir')
 
-arquivo = open("testezin", "w")
-arquivo.write('Arquivo novo p deletar fodas')
+with open("testezin.txt", "w") as arquivo:
+    arquivo.write('Arquivo novo p deletar fodas')
+    #deletando arquivo
+os.chdir("testezin.txt")
+os.rmdir(os.getcwd())
