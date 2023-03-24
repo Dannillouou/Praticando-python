@@ -25,4 +25,12 @@ def rodandoStrings():
     rickRoll = """Never gonna give you up
     Never gonna let you down"""
 
+    primeiro_nome = (input("Digite seu primeiro nome: "))
+    sobrenome = (input("Digite seu sobrenome: "))
+    idade = (input("Digite sua idade: "))
+    f_string = f"O seu nome é {primeiro_nome} {sobrenome} e voce tem {idade} anos!"
+
+    print("essa é a grande f string:\n ", f_string)
+    print(type(f_string))
+
     print(rickRoll)

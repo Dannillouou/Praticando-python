@@ -13,8 +13,7 @@ sys.path.append('c:/Users/B51995/Desktop/Praticando-python/packageListas')
 sys.path.append('c:/Users/B51995/Desktop/Praticando-python/package')
 
 #agora, chamamos os módulos como se nada tivesse acontecido
-import variables
-import arquivos
+
 
 #É possível também, pelo terminal, mudar a variável de ambiente PYTHONPATH, mas eu preferi usar só
 #a forma que pode ser feita dentro do código
@@ -38,6 +37,7 @@ import funcoes as func
 #Começando bem:
 func.saudacao()
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Usamos a palavra-chave pass para permitir que um bloco de código com algo 
 #que ainda vai ser feito execute, mesmo sem fazer nada, sem gerar um erro, como de identação, por exemplo
 n = 11
@@ -64,4 +64,5 @@ print(0o15)  # printa 13 em octal
 #binário: 0b ou 0B
 #octal: 0o ou 00
 #hexadecimal: 0x ou 0X
-
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Daqui p frente código dos outros módulos
