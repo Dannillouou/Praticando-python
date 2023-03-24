@@ -96,7 +96,7 @@ print('at' not in 'battle') #Printa false, pois olha se não tem "at" em "battle
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #brincando com arquivos
 
-try: #tenta executar
+"""try: #tenta executar
   #Tratamento de exceção é uma boa prática, pois nem sempre a
   #abertura de arquivos pode funcionar
   
@@ -165,4 +165,4 @@ with open("testezin.txt", "w") as arquivo:
     arquivo.write('Arquivo novo p deletar fodas')
     #deletando arquivo
 os.chdir("testezin.txt")
-os.rmdir(os.getcwd())
+os.rmdir(os.getcwd())"""
