@@ -9,8 +9,8 @@
 #é onde o programa olha para procurar por coisas importantes como os modules
 import sys
 #como o sys.path é uma lista, podemos simplesmente adicionar o caminho do novo módulo
-sys.path.append('e:/Users/B51995/Desktop/Praticando-python/packageListas')
-sys.path.append('e:/Users/B51995/Desktop/Praticando-python/package')
+sys.path.append('c:/Users/B51995/Desktop/Praticando-python/packageListas')
+sys.path.append('c:/Users/B51995/Desktop/Praticando-python/package')
 
 #agora, chamamos os módulos como se nada tivesse acontecido
 import variables
@@ -65,40 +65,8 @@ print(0o15)  # printa 13 em octal
 #hexadecimal: 0x ou 0X
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# multiline string 
-rickRoll = """Never gonna give you up
-Never gonna let you down"""
-
-print(rickRoll)
-
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#brincando com strings
-#Concatenando strings
-greet = "Hello, "
-name = "Jack"
-
-#usando o operador +
-result = greet + name
-print(result)
-
-greet = 'Hello'
-#iterando através string greet
-#as strings funcionam como uma lista de caracteres
-for letter in greet:
-    print(letter)
-
-    greet = 'Hello'
-
-#Contando a quantidade de caracetres, o comprimento, da string
-print(len(greet))
-
-print('a' in 'program') #Como se tivesse um if implicito, printa true
-print('at' not in 'battle') #Printa false, pois olha se não tem "at" em "battle
-
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #brincando com arquivos
-
-"""try: #tenta executar
+try: #tenta executar
   #Tratamento de exceção é uma boa prática, pois nem sempre a
   #abertura de arquivos pode funcionar
   
@@ -149,8 +117,8 @@ with open("coltecEscreve.txt", "r+") as coltec:
 #funcionou quase como o esperado, mas deu p entender a ideia
 
 #Manipulando diretórios
-# change directory
-os.chdir('E:\\Users\B51995')
+#change directory
+os.chdir('c:\\Users\B51995')
 diretorioAtual = os.getcwd()
 print(diretorioAtual)
 
@@ -158,8 +126,17 @@ listaDiscoC = os.listdir('C:\\')
 print(listaDiscoC)
 
 os.chdir(diretorioAtual + '\Desktop')
+diretorioAtual = os.getcwd()
+print(diretorioAtual)
+caminho = diretorioAtual.split("\\")
+print(caminho)
+#voltando um diretório apagando a pasta mais à direita
+del caminho[-1]
+print(caminho)
+diretorioAtual = list(caminho)
+print(diretorioAtual)
 #criando diretorio
-os.mkdir('teste')
+"""os.mkdir('teste')
 os.rename('teste', 'novoDir')
 os.chdir('novoDir')
 
