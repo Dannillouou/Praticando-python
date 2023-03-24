@@ -17,6 +17,8 @@ import variables
 
 #É possível também, pelo terminal, mudar a variável de ambiente PYTHONPATH, mas eu preferi usar só
 #a forma que pode ser feita dentro do código
+
+#Mesmo que de um warning, isso ocorre porque o pre-analisador não entende que os modulos podem estar em outra pasta, mas por enquanto eu acho que nao tem problema
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Import para manipulação dos arquivos do sistema
