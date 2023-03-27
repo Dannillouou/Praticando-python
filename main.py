@@ -11,6 +11,7 @@ import sys
 #como o sys.path é uma lista, podemos simplesmente adicionar o caminho do novo módulo
 sys.path.append('c:/Users/B51995/Desktop/Praticando-python/packageListas')
 sys.path.append('c:/Users/B51995/Desktop/Praticando-python/package')
+import functions as func
 
 #agora, chamamos os módulos como se nada tivesse acontecido
 
@@ -23,11 +24,6 @@ sys.path.append('c:/Users/B51995/Desktop/Praticando-python/package')
 
 #Import para manipulação dos arquivos do sistema
 import os
-
-#importando arquivo com funções
-#coloquei o antigo módulo functions dentro de funções
-import funcoes as func
-
 #modulos e packages --> modulos são o arquivo py, enquanto o package tem o arquivo __init__
 
 #imports de todos os modulos/arquivos com todo o código ja escrito para organizar
@@ -66,3 +62,6 @@ print(0o15)  # printa 13 em octal
 #hexadecimal: 0x ou 0X
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Daqui p frente código dos outros módulos
+
+range = list(range(5, 30, 2))
+print(range)
