@@ -77,3 +77,23 @@ hexadecimal: 0x ou 0X
 #usando range
 range = list(range(5, 30, 2))
 print(range)
+
+alunos = ["a", "b", "c", "d", "e", "Beatriz", "Itamar"]
+
+# procura por Beatriz
+if "Beatriz" in alunos:
+    print("achei!")
+else:
+    print("não :(")
+
+# procura pela lista ["Beatriz", "Itamar"]
+if ["Beatriz", "Itamar"] in alunos:
+    print("achei!")
+else:
+    print("não :(")
+
+# procura por beatriz e itamar na lista
+if "Beatriz" in alunos and "Itamar" in alunos:
+    print("achei!")
+else:
+    print("não :(")
