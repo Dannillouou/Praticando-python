@@ -1,0 +1,60 @@
+# classe mae
+class Animal: 
+
+    def comer(self):
+        print("chomp chomp chomp")
+
+    def dormir(self):
+        print("zzzzzzzzzzZZzzzZzzZz")
+
+# classe filha herdando classe mae animal
+class Papagaio(Animal):
+    
+    # def comer(self):
+    #     return super().comer()
+    
+    # def dormir(self):
+    #     return super().dormir()
+
+    def falar(self):
+        print("não sei matematica basica")
+
+class Loro(Papagaio):
+
+    def __init__(self, nome):
+        self.nome = nome
+
+    # def comer(self):
+    #     return super().comer()
+    # def dormir(self):
+    #     return super().dormir()
+    # def falar(self):
+    #     return super().falar()
+
+# criando primeiro objeto papagaio
+papagaio_1 = Papagaio()
+
+# chamando argumento classe mae
+papagaio_1.comer()
+papagaio_1.dormir()
+
+# chamando argumentos novos
+papagaio_1.falar()
+
+# criando outro objeto papagaio
+papagaio_2 = Papagaio()
+
+# chamando argumento classe mae
+papagaio_2.comer()
+papagaio_2.dormir()
+
+# chamando argumentos novos
+papagaio_2.falar()
+
+loro = Loro("Loro jose")
+
+print(f"Meu nome é {loro.nome} eu ", end=" ")
+loro.comer()
+loro.dormir()
+loro.falar()
+
