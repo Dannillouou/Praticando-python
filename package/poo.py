@@ -19,6 +19,7 @@ class Papagaio(Animal):
     def falar(self):
         print("não sei matematica basica")
 
+# classe filha da filha herdando Papagaio
 class Loro(Papagaio):
 
     def __init__(self, nome):
@@ -58,3 +59,26 @@ loro.comer()
 loro.dormir()
 loro.falar()
 
+class Produto:
+  def __init__(self):
+  # atributo privado
+    self.__preco_maximo = 1000
+
+  def vender(self):
+    print("preço de venda {}".format(self.__preco_maximo))
+
+  def setPrecoMaximo(self, novo_preco):
+    self.__preco_maximo = novo_preco
+
+produto = Produto()
+
+# vendo preco
+produto.vender()
+
+# tentando mudar preco
+produto.__preco_maximo = 9000
+produto.vender()
+
+# realmente mudando preco
+produto.setPrecoMaximo(9000)
+produto.vender()
