@@ -82,3 +82,30 @@ produto.vender()
 # realmente mudando preco
 produto.setPrecoMaximo(9000)
 produto.vender()
+
+# polimorfismo
+class Poligono:
+  # gerar um formato
+  def gerar(self):
+    print("gerando poligono...")
+
+class Quadrado(Poligono):
+  # gerar quadrado
+  def gerar(self):
+    print("gerando quadrado...")
+
+class Circulo(Poligono):
+  # gerar circulo
+  def gerar(self):
+    print("gerando circulo...")
+    
+# criando objeto de Quadrado
+quadrado = Quadrado()
+quadrado.gerar()
+
+# criando objeto de Circulo
+circulo = Circulo()
+circulo.gerar()
+
+# o mesmo método gerar existe de várias formas diferentes para duas subclasses
+# de uma mesma superclasse, isso é o polimorfismo
