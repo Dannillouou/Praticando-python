@@ -11,8 +11,8 @@ alterando o module interno sys, onde alteramos o sys.path, que, equivalentemente
 """
 import sys
 #como o sys.path é uma lista, podemos simplesmente adicionar o caminho do novo módulo
-sys.path.append('c:/Users/B51995/Desktop/Praticando-python/packageListas')
-sys.path.append('c:/Users/B51995/Desktop/Praticando-python/package')
+sys.path.append('e:/Users/B51995/Desktop/Praticando-python/packageListas')
+sys.path.append('e:/Users/B51995/Desktop/Praticando-python/package')
 import funcoes as func
 
 """
@@ -80,6 +80,8 @@ print(range)
 
 alunos = ["a", "b", "c", "d", "e", "Beatriz", "Itamar"]
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# procurando por um elemento dentro de uma lista
 # procura por Beatriz
 if "Beatriz" in alunos:
     print("achei!")
@@ -97,3 +99,7 @@ if "Beatriz" in alunos and "Itamar" in alunos:
     print("achei!")
 else:
     print("não :(")
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+lista_teste = [float(input("Enter side "+str(i+1)+" : ")) for i in range(5)]
+print(lista_teste)
