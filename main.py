@@ -11,9 +11,9 @@ alterando o module interno sys, onde alteramos o sys.path, que, equivalentemente
 """
 import sys
 #como o sys.path é uma lista, podemos simplesmente adicionar o caminho do novo módulo
-sys.path.append('e:/Users/B51995/Desktop/Praticando-python/packageListas')
-sys.path.append('e:/Users/B51995/Desktop/Praticando-python/package')
-import funcoes as func
+# sys.path.append('c:/Users/B51995/Desktop/Praticando-python/packageListas')
+# sys.path.append('c:/Users/B51995/Desktop/Praticando-python/package')
+# import funcoes as func
 
 """
 agora, chamamos os módulos como se nada tivesse acontecido
@@ -37,7 +37,7 @@ cada módulo faz uma coisa diferente e tem uma função que roda todo o código
 
 
 #Começando bem:
-func.saudacao()
+# func.saudacao()
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ if n > 10:
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #brincando com modules
 #listar os bgl dentro de um modulo
-funcoes = dir (func)
+# funcoes = dir (func)
 
 #listar as variaveis modulos e os caralha4
 print(dir())
@@ -101,5 +101,7 @@ else:
     print("não :(")
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-lista_teste = [float(input("Enter side "+str(i+1)+" : ")) for i in range(5)]
+numero = 10
+lista_teste = []
+lista_teste.append(0 for i in range(numero))
 print(lista_teste)
