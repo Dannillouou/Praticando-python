@@ -6,7 +6,7 @@ Os vários tópicos, como uso de strings, listas, etc. estão salvos em diferent
 ## pyenv
 O pyenv é um gerenciados de packages e de versões do python. Pelo que entendi até agora, ele torna simples usar e gerenciar diferentes versões do Python simultaneamente no computador. <br>
 <a href="https://realpython.com/intro-to-pyenv/#what-about-a-package-manager">Esse site</a> explica melhor sobre o pyenv e como instalar. <br>
-<a href="https://github.com/pyenv-win/pyenv-win">Essa galerinha</a> do balacobaco portou o pyenv pra o windows.
+<a href="https://github.com/pyenv-win/pyenv-win">Essa galerinha</a> do balacobaco colocou o pyenv funcionando no windows.
 
 ## Instalando poetry
 ### baixando arquivo py
