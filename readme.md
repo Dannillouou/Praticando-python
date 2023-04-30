@@ -4,9 +4,9 @@ Repositório para guardar diversos exemplos de códigos em python conforme vou a
 Os vários tópicos, como uso de strings, listas, etc. estão salvos em diferentes módulos, que são todos chamados no arquivo principal. O código ja escrito no arquivo principal é exemplos de código que não achei interessante de colocar em módulos
 
 ## pyenv
-O pyenv é um gerenciados de packages e de versões do python. Pelo que entendi até agora, ele torna simples usar e gerenciar diferentes versões do Python simultaneamente no computador. 
-<a href="https://realpython.com/intro-to-pyenv/#what-about-a-package-manager">Esse site</a> explica melhor sobre o pyenv e como instalar
-<a href="https://github.com/pyenv-win/pyenv-win">Essa galerinha</a> do balacobaco portou o pyenv pra o windows
+O pyenv é um gerenciados de packages e de versões do python. Pelo que entendi até agora, ele torna simples usar e gerenciar diferentes versões do Python simultaneamente no computador. <br>
+<a href="https://realpython.com/intro-to-pyenv/#what-about-a-package-manager">Esse site</a> explica melhor sobre o pyenv e como instalar. <br>
+<a href="https://github.com/pyenv-win/pyenv-win">Essa galerinha</a> do balacobaco colocou o pyenv funcionando no windows.
 
 ## Instalando poetry
 ### baixando arquivo py
