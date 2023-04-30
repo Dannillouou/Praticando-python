@@ -7,11 +7,18 @@ def rodandoDicionario():
     print(estados['MG'])
     #adicionando valor
     estados['PR'] = 'Curitiba'
-    chaves = estados.keys()
-    estadosList = list(estados.items())
-    print('printando chaves:')
+    print('printando chaves')
+    for chave in estados.keys():
+        print(chave)
+    print('printando valores:')
+    for valores in estados.values():
+        print(valores)
+    print('printando itens')
+    for item in estados.items():
+        print(item)
 
-    #iterando por duas listas ao mesmo tempo
-    for cidade, estado in zip(estadosList, chaves):
-        print(f'{estado}  {cidade}')
+    # iterando por duas listas ao mesmo tempo
     print(type(estados))
+
+rodandoDicionario()
+
