@@ -21,4 +21,3 @@ def rodandoDicionario():
     print(type(estados))
 
 rodandoDicionario()
-
