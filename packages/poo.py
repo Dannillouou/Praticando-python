@@ -1,4 +1,6 @@
 # classe mae
+# a palavra chave self é chamada dentro de todo e qualquer método dentro de uma classe
+# pelo que entendi até agora
 class Animal:
 
     def comer(self):
