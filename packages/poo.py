@@ -60,17 +60,17 @@ class TrianguloNaoExiste(Exception):
 # classe poligono
 class Poligono:
     def __init__(self, num_lados):
-        self.__num_lados = num_lados
+        self._num_lados = num_lados
         self.lados = []
 
     def inputLados(self):
-        # self.lados = [float(input("insira o lado" + str(i + 1) + " : " for i in range(self.__num_lados)))]
+        # self.lados = [float(input("insira o lado" + str(i + 1) + " : " for i in range(self._num_lados)))]
         # não é feita verificação de se o polígono é válido
-        for i in range(self.__num_lados):
+        for i in range(self._num_lados):
             self.lados.append(int(input(f"Digite o {i + 1} lado do poligono: ")))
 
     def mostra_lados(self):
-        for i in range(self.__num_lados):
+        for i in range(self._num_lados):
             print("Lado ", i + 1, "é: ", self.lados[i])
 
 class Triangulo(Poligono):
