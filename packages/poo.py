@@ -1,6 +1,14 @@
 # classe mae
 # a palavra chave self é chamada dentro de todo e qualquer método dentro de uma classe
 # pelo que entendi até agora
+
+# atributos privados
+# quando colocamos o "__" para definir um atributo, o python na verdade faz uma
+# organização interna dos atributos, fazendo uma separação entre o atributo de uma
+# classe superior e uma inferior para não ocorrer problemas
+# A convenção é de usar "_" para dizer que o atributo não deve ser acessado fora
+# da classe. Se for uma preocupação os nomes conflitarem, deve ser colocado o nome
+# da classe na frente do atributo
 class Animal:
 
     def comer(self):
@@ -69,15 +77,19 @@ loro.falar()
 
 
 class Produto:
+    # essa forma de proteger o atributo é uma convenção. O "_" não significa
+    # nada para o python, por isso colocamos também a classe antes, mas é uma
+    # convenção de que esse atributo não deve ser acessados fora da classe
+    _Produto_preco_maximo = 0
     def __init__(self):
         # atributo privado
-        self.__preco_maximo = 1000
+        self._Produto_preco_maximo = 1000
 
     def vender(self):
-        print("preço de venda {}".format(self.__preco_maximo))
+        print("preço de venda {}".format(self._Produto_preco_maximo))
 
     def setPrecoMaximo(self, novo_preco):
-        self.__preco_maximo = novo_preco
+        self._Produto_preco_maximo = novo_preco
 
 
 produto = Produto()
@@ -86,7 +98,7 @@ produto = Produto()
 produto.vender()
 
 # tentando mudar preco
-produto.__preco_maximo = 9000
+produto._Produto_preco_maximo = 9000
 produto.vender()
 
 # realmente mudando preco

@@ -5,11 +5,14 @@
 # métodos começados e terminadas com "__" são 
 # funções especiais (__init__, por exemplo) são usados pelo interpretador
 # para implementar certas coisas. Algumas funções especiais do python:
-# __init__()	construtor do objeto
+# __init__() construtor do objeto
 # __str__()	retorna uma representação em string do objeto
 # __len__()	retorna a largura do objeto
 # __add__()	"soma" dois objetos
-# __call__()	chama métodos da classe como uma função normal
+# __call__() sama métodos da classe como uma função normal
+# as funções especiais de sobrecarga de operador devem ser usadas dentro
+# de uma mesma classe para comparar dois objetos baseados em algum atributo
+# deles
 
 class Ponto:
 	x = 0
@@ -35,3 +38,25 @@ print(ponto2)
 # que é o método __add__ definido no objeto
 # se a função __add__ não for definida no objeto, o Python lança uma exceção "TypeError"
 print(ponto1 + ponto2)
+# é possível fazer todo tipo operação usando essa lógica de funções mágicas
+
+# também é possível fazer a sobrecarga de operadores lógicos
+
+class Pessoa:
+	_idade = 0
+	_nome = ""
+
+	def __init__(self, idade = 0, nome = "fulano"):
+		self._idade = idade
+		self._nome = nome
+	
+	def __lt__(self, other):
+		return self._idade < other._idade
+	
+# objetos pessoa
+pessoa1 = Pessoa(45, "Carlos")
+pessoa2 = Pessoa(15, "Mariana")
+
+# comparando objetos pela idade, definido pelo método __lt__ dentro da classe
+print(pessoa1 < pessoa2)
+
