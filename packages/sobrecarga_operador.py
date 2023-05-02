@@ -33,5 +33,5 @@ print(ponto1)
 print(ponto2)
 # quando usamos essa sintaxe python chama a função especial/mágica que soma os dois objetos
 # que é o método __add__ definido no objeto
-# se a função __add__ não for definida no objeto, o Python lança uma exceção
+# se a função __add__ não for definida no objeto, o Python lança uma exceção "TypeError"
 print(ponto1 + ponto2)
