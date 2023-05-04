@@ -17,12 +17,13 @@ def rodandoListas():
     # adicionando elementos
     linguagens.append("c++")
     print(linguagens)
+    
+    frameworks = ["cake", "flutter", "bootsrap"]
 
     # concatenando listas
     print(frameworks + linguagens)
-    
+
     # adicionando toda a lista a outra
-    frameworks = ["cake", "flutter", "bootsrap"]
     print(frameworks)
     frameworks.extend(linguagens)
     print(frameworks)
@@ -45,3 +46,16 @@ def rodandoListas():
 
     # printando tipo da lista
     print(type(linguagens))
+
+    anajulia = "ANAJULIA"
+    lista_anajulia = list(anajulia)
+
+    # removendo todas as ocorrencias de um valor na lista
+    def remove_ocorrencias_valor_lista(lista, val):
+        return[valor for valor in lista if valor != val]
+
+    print(lista_anajulia)
+    lista_anajulia = remove_ocorrencias_valor_lista(lista_anajulia, "A")
+    print(lista_anajulia)
+    
+rodandoListas()
