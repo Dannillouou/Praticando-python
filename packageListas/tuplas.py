@@ -1,3 +1,8 @@
+# tuplas x listas
+# tuplas sõa mais rápidas e mais seguros
+# devem ser usadas quando precisamos apenas transportar dados
+# de um lugar para o outro
+
 def rodandoTuplas():
     #As tuplas, um tipo diferente de lista
 
