@@ -1,5 +1,6 @@
 # modulo para usar operações com strings em python
 import string
+import itertools
 
 # modulo que 
 
@@ -58,3 +59,10 @@ exponencial_dois = PotenciaDois(10)
 for potencia in exponencial_dois:
     print(potencia)
 
+# iterador que aumenta de um em um infinitamente
+iterador_infinito = itertools.count(1)
+
+# printa até o úlitmo valor armazenado na variável potência
+# criada no for que tem o retorno do objeto potencia_dois
+for i in range(potencia):
+    print(next(iterador_infinito))
