@@ -51,6 +51,7 @@ def rodandoListas():
     lista_anajulia = list(anajulia)
 
     # removendo todas as ocorrencias de um valor na lista
+    # usando list comprehension
     def remove_ocorrencias_valor_lista(lista, val):
         return[valor for valor in lista if valor != val]
 
