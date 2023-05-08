@@ -100,7 +100,7 @@ print(cartao)
 new_set = {"A", "E", "I", "O", "U"}
 
 # new_dict = dict(new_set) -> nao funfa
-new_keys = (1,2,3,4,5)
+new_keys = (1,2, 3,4,5)
 
 new_dict = dict(zip(new_set, new_keys))
 print(new_dict)
