@@ -35,3 +35,23 @@ print(impar()) # printa 7
 # chamando função externa novamente
 impar2 = calcular()
 print(impar2()) # printa 3
+
+# as closures permitem que haja um "escondimento" dos dados,
+# de forma que as variáveis sejam mas não sejam acessadas globalmente
+
+# e podem ser reutilizados de forma mais elegante no código
+def fazer_multiplicador_de_n(n):
+    def multiplicador(x):
+        return x * n
+    return multiplicador
+
+
+vezes3 = fazer_multiplicador_de_n(3)# Multiplier of 3
+
+vezes5 = fazer_multiplicador_de_n(5)# Multiplier of 5
+
+print(vezes3(9))# Output: 27
+
+print(vezes5(3))# Output: 15
+
+print(vezes5(vezes3(2)))# Output: 30
