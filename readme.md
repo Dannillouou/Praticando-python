@@ -16,3 +16,16 @@ O pyenv é um gerenciados de packages e de versões do python. Pelo que entendi 
 ```
 set PATH=%PATH%;%USERPROFILE%\AppData\Roaming\pypoetry\venv\Scripts
 ```
+### Pastas
+
+#### packages
+Diretório com estudos sobre diversos tópicos
+
+#### packageListas
+Diretório com estudos sobre tópicos específicos de estruturas de dados
+
+#### exercicios
+Exercícios diversos
+
+#### maluquicie
+Começo do que pode ser a leitura de dados em uma base em formato csv
