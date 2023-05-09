@@ -105,3 +105,24 @@ numero = 10
 lista_teste = []
 lista_teste.append(0 for i in range(numero))
 print(lista_teste)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def fibonacci(n):
+
+   temp1, temp2 = 0, 1
+
+   total = 0
+
+   while total < n:
+
+       yield temp1
+
+       temp3 = temp1 + temp2
+
+       temp1 = temp2
+
+       temp2 = temp3
+
+       total += 1
+
+fib_object = fibonacci(20)
