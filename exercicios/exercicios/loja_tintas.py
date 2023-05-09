@@ -32,7 +32,7 @@ class ModoCompraDeTintaInvalido(Exception):
 
 #============================================================================================
 
-def calculaOrcamento(area, modo):
+# def calculaOrcamento(area, modo):
 
 #variáveis
 area_por_litros_de_tinta = 6
