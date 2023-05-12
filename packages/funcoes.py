@@ -80,4 +80,10 @@ def rodandoFuncoes():
     
     print(soma_arbitraria_2(-10, 1,2,3,4,5,6,7,8,9,10))
 
+    # funções que podem receber muitos argumentos
+    def alunos_bons(escola, **alunos):
+        print(escola)
+        for cada_aluno in alunos:
+            print(cada_aluno, end=" ")
+
 rodandoFuncoes()
