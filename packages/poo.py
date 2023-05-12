@@ -238,4 +238,5 @@ pessoa2 = Pessoa(15, "Mariana")
 # comparando objetos pela idade, definido pelo método __lt__ dentro da classe
 print(pessoa1 < pessoa2)
 
+# os atributos são armazenados em um dicionário
 print(pessoa1.__dict__)
