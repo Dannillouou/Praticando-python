@@ -73,3 +73,10 @@ print("essa é a grande f string:\n ", f_string)
 print(type(f_string))
 
 print(rickRoll)
+
+# função repr
+# retorna uma representação printável do objeto recebido
+# que pode ser armazenada em uma variável
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numeros_printaveis = repr(lista)
+print(numeros_printaveis)# printa [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
