@@ -103,8 +103,9 @@ def porcento(funcao):
 
 @estrela
 @porcento
-def printa_mensagem(mensagem):
+# parece o conceito de herança de uma classe, mas só para função
+def printa_mensagem_doidera(mensagem):
     print(mensagem)
-# equivalente a printa_mensagem = estrela(porcento(printa_mensagem))
 
-printa_mensagem("ei blz")
+# equivalente a printa_mensagem = estrela(porcento(printa_mensagem))
+printa_mensagem_doidera("ei blz")
