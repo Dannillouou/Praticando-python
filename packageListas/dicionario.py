@@ -106,23 +106,24 @@ new_dict = dict(zip(new_set, new_keys))
 print(new_dict)
 
 # dicionário aninhado
-#     dicionario_aninhado = {"Universidade" : "FGV", "Escolas" : {1 : "EMAp", 2 : "EBAPE", 3 : "DIREITO RIO"}}
-#     print(dicionario_aninhado.values())
+dicionario_aninhado = {"Universidade" : "FGV", "Escolas" : {1 : "EMAp", 2 : "EBAPE", 3 : "DIREITO RIO"}}
+print(dicionario_aninhado.values())
 
-#     # criando dicionario por lista de tuplas
-#     dicionario_criado_por_funcao = dict(
-#         [
-#             (1, "EMAp"),
-#         (2, "EBAPE"), 
-#         (3, "DIREITO RIO")
-#     ]
-# )
+# criando dicionario por lista de tuplas
+dicionario_criado_por_funcao = dict(
+    [
+        (1, "EMAp"),
+        (2, "EBAPE"), 
+        (3, "DIREITO RIO")
+    ])
 
-# try:
-#     print(dicionario_aninhado["Escolas"][4])
-# except KeyError: # erro gerado quando a chave acessada não existe
-#     print("Chave não existe")
+print(dicionario_criado_por_funcao)
 
-# # o "in" verifica a existência de chave, não de valor
-# print(1 in dicionario)
-# print("EMAp" in dicionario)
+try:
+    print(dicionario_aninhado["Escolas"][4])
+except KeyError: # erro gerado quando a chave acessada não existe
+    print("Chave não existe")
+
+# o "in" verifica a existência de chave, não de valor
+print(1 in dicionario)
+sprint("EMAp" in dicionario)
