@@ -20,4 +20,26 @@ def rodandoDicionario():
     # iterando por duas listas ao mesmo tempo
     print(type(estados))
 
+    # dicionário aninhado
+    dicionario_aninhado = {"Universidade" : "FGV", "Escolas" : {1 : "EMAp", 2 : "EBAPE", 3 : "DIREITO RIO"}}
+    print(dicionario_aninhado.values())
+
+    # criando dicionario por lista de tuplas
+    dicionario_criado_por_funcao = dict(
+        [
+            (1, "EMAp"),
+        (2, "EBAPE"), 
+        (3, "DIREITO RIO")
+        ]
+    )
+
+    try:
+        print(dicionario_aninhado["Escolas"][4])
+    except KeyError: # erro gerado quando a chave acessada não existe
+        print("Chave não existe")
+
+    # o "in" verifica a existência de chave, não de valor
+    print(1 in dicionario)
+    print("EMAp" in dicionario)
+
 rodandoDicionario()
