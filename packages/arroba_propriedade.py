@@ -1,4 +1,10 @@
-# # classe que armazena temperatura em celsius e converte para Fahrenheit
+# a função property permite que tenhamos atributos praticamente
+# privados em python, pois cria uma interface em que de qualquer forma
+# a propriedade é manipulada por métodos e ainda permite que haja uma espécie
+# de retro compatibilidade com "versões mais antigas" da classe
+
+
+# classe que armazena temperatura em celsius e converte para Fahrenheit
 """
 class Celsius:
     def __init__(self,temperatura = 0) -> None:
@@ -64,4 +70,42 @@ print(temperatura_humano.converter_para_fahrenheit())
 
 # terceira versão da classe 
 class Celsius:
-    pass
+    def __init__(self, temperatura = 0) -> None:
+        self.temperatura = temperatura
+
+    def converter_para_fahrenheit(self):
+        return (self.get_temperatura() * 1.8) + 32
+    
+    # método getter
+    def get_temperatura(self) -> float:
+        print("obtendo valor...")
+        return self._temperatura
+    
+    # método setter
+    def set_temperatura(self, valor) -> None:
+        print("mudando valor...")
+        if valor < -273.15:
+            raise ValueError("A temperatura de um objeto não pode ser menor do que -273.15 graus Celsius")
+        self._temperatura = valor
+
+    # usando o decorador interno property que seta os métodos criados por nós como métodos
+    # getter e setter para o objeto
+    temperatura = property(get_temperatura, set_temperatura)
+    # o valor fica da temperatura fica armazenado numa variável privada _temperatura
+    # e o atributo temperatura funciona só como uma interface para isso
+
+# a criação do objeto chama o método setter mesmo que esse não esteja 
+# implementado no construtor graças ao decorardor property
+temperatura_humana = Celsius(37)
+print(temperatura_humana.get_temperatura())
+temperatura_humana.set_temperatura(45)
+print(temperatura_humana.get_temperatura())
+# mesmo tentando mudar diretamente o setter é chamado
+# no objeto
+temperatura_humana.temperatura = 50
+print(temperatura_humana.get_temperatura())
+# temperatura_humana.temperatura = -300 #esse comando da erro
+print(temperatura_humana.get_temperatura())
+
+# a função property cria um objeto property que funciona 
+# como uma espécie de interface
