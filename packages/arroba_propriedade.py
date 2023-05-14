@@ -69,6 +69,7 @@ print(temperatura_humano.converter_para_fahrenheit())
 # como lidamos com o problema? @property
 
 # terceira versão da classe 
+"""
 class Celsius:
     def __init__(self, temperatura = 0) -> None:
         self.temperatura = temperatura
@@ -106,6 +107,43 @@ temperatura_humana.temperatura = 50
 print(temperatura_humana.get_temperatura())
 # temperatura_humana.temperatura = -300 #esse comando da erro
 print(temperatura_humana.get_temperatura())
+"""
 
 # a função property cria um objeto property que funciona 
 # como uma espécie de interface
+# funciona como se fosse um decorador pois o atributo
+# temperatura se torna uma função que implementa o método
+# getter/setter criado manualmente para atualizar o atributo
+# privado temperatura
+# contudo, ainda é possível acessar diretamente o atributo privado
+# python = paia
+class Celsius:
+    def __init__(self, temperatura) -> None:
+        self.temperatura = temperatura
+
+    def converte_fahrenheit(self):
+        return(self.temperatura * 1.8) + 32
+    
+    @property
+    def temperatura(self) -> float:
+        print("pegando valor...")
+        return self._temperatura
+
+    @temperatura.setter
+    def temperatura(self, valor):
+        print("mudando valor...")
+        if valor < -273.15:
+            raise ValueError("A temperautra não pode ser menor que -273.15 graus Celsius")
+        self._temperatura = valor
+
+temperatura_humana = Celsius(37)
+print(temperatura_humana.temperatura)
+# aparentemente mudando diretamente mas chamando setter
+temperatura_humana.temperatura = 45 # printa "mudando valor..."
+print(temperatura_humana.temperatura)
+# tentando manipular o atributo privado
+temperatura_humana._temperatura = -300 # aparentemente funciona
+print(temperatura_humana._temperatura) # não levanta ValueError
+print(temperatura_humana.temperatura) #python sendo python
+#levantando erro
+# temperatura_humana.temperatura = -300
