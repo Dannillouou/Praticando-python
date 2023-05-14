@@ -1,7 +1,3 @@
-# arredondar números para cima
-from math import ceil
-# e para baixo
-from math import floor
 # importando funções do funcionamento do sistema
 from funcoes_loja_tintas import *
 #============================================================================================

@@ -14,13 +14,12 @@
 # entendi que os 10% de folga devem ser apenas para o caso 3
 
 #============================================================================================
-#variáveis
-area_por_litros_de_tinta = 6
-litros_lata = 18
-litros_galao = 3.6
-porcentagem_folga = 10
-preco_lata = 80
-preco_galao = 25
+# arredondar números para cima
+from math import ceil
+# e para baixo
+from math import floor
+
+#============================================================================================
 #variáveis
 area_por_litros_de_tinta = 6
 litros_lata = 18
