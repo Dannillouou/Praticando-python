@@ -104,3 +104,11 @@ pokedex.info()
 print(mtcars["cyl"].mean())
 print(mtcars["cyl"].median())
 print(mtcars["cyl"].mode()[0])
+
+# vendo duplicatas
+print("vendo duplicatas")
+print(mtcars.duplicated())
+
+# removendo duplicatas
+# (não vai funcionar pra esse dataframe)
+mtcars.drop_duplicates(inplace = True)
