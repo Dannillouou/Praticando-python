@@ -2,6 +2,8 @@ import string
 
 dicionario = string.ascii_uppercase + string.ascii_lowercase + " !?.,"
 
+print(dicionario)
+
 def cifra_reversa(mensagem) -> str:
     resultado = ""
     caracteres_restantes = len(mensagem) - 1
