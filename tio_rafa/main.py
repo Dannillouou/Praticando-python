@@ -1,6 +1,6 @@
-import modulo_criptografas
+from modulo_criptografas import *
 
-print(modulo_criptografas.cifra_reversa("Eu adoro a EMAp"))
-mensagem_criptografada = modulo_criptografas.cifra_de_cesar("Eu adoro a EMAp", "encriptar", 3)
+print(cifra_reversa("Eu adoro a EMAp"))
+mensagem_criptografada = cifra_de_cesar("Eu adoro a EMAp", "encriptar", 3)
 print(mensagem_criptografada)
-print(modulo_criptografas.cifra_de_cesar(mensagem_criptografada, "decriptar", 3))
+print(cifra_de_cesar(mensagem_criptografada, "decriptar", 3))
