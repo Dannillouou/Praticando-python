@@ -61,19 +61,47 @@ def verificar_pedido(numero_do_pedido, fila_de_pedidos):
 pedidos_em_preparo = []
 
 # Driver code
-adicionar_pedido(1, pedidos_em_preparo)
-adicionar_pedido(2, pedidos_em_preparo)
-adicionar_pedido(3, pedidos_em_preparo)
+
+#prints para menu
+print("Digite 1 para listar pedidos")
+print("Digite 2 para adicionar seu pedido")
+print("Digite 3 para preparar um pedido")
+print("Digite 4 para verificar um pedido")
+print("Digite 5 para encerrar o programa")
+
+while True:
+    opcao = int(input("Digite a opção desejada: "))
+
+    if opcao == 1:
+        listar_pedidos_em_preparo(pedidos_em_preparo)
+    elif opcao == 2:
+        pedido = int(input("Digite o numero do pedido: "))
+        adicionar_pedido(pedido, pedidos_em_preparo)
+    elif opcao == 3:
+        preparar_pedido(pedidos_em_preparo)
+    elif opcao == 4:
+        pedido = int(input("Digite o numero do pedido: "))
+        verificar_pedido(pedido, pedidos_em_preparo)
+    elif opcao == 5:
+        break
+    else:
+        print("Opcao incorreta")
+
+
+
+# adicionar_pedido(1, pedidos_em_preparo)
+# adicionar_pedido(2, pedidos_em_preparo)
+# adicionar_pedido(3, pedidos_em_preparo)
     
-listar_pedidos_em_preparo(pedidos_em_preparo)
+# listar_pedidos_em_preparo(pedidos_em_preparo)
 
-verificar_pedido(2, pedidos_em_preparo)
-verificar_pedido(3, pedidos_em_preparo)
+# verificar_pedido(2, pedidos_em_preparo)
+# verificar_pedido(3, pedidos_em_preparo)
 
-preparar_pedido(pedidos_em_preparo)# 1
-preparar_pedido(pedidos_em_preparo)# 2
+# preparar_pedido(pedidos_em_preparo)# 1
+# preparar_pedido(pedidos_em_preparo)# 2
 
-verificar_pedido(2, pedidos_em_preparo)
-verificar_pedido(3, pedidos_em_preparo)
+# verificar_pedido(2, pedidos_em_preparo)
+# verificar_pedido(3, pedidos_em_preparo)
 
-listar_pedidos_em_preparo(pedidos_em_preparo)
+# listar_pedidos_em_preparo(pedidos_em_preparo)
