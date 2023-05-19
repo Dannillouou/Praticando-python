@@ -1,4 +1,5 @@
 import pandas as pd
+import pandas_bokeh as bokeh
 
 # usando numeros aleatorios para fazer um dataframe
 import random
@@ -110,5 +111,17 @@ print("vendo duplicatas")
 print(mtcars.duplicated())
 
 # removendo duplicatas
-# (não vai funcionar pra esse dataframe)
+# (não vai fazer nada nesse dataframe)
 mtcars.drop_duplicates(inplace = True)
+
+#=======================================================================
+# correlação
+# a correlação "corr()" calcula as correlações entre cada coluna (variável)
+# dentro do dataframe
+# o método ignora colunas que tenham dados não numéricos
+
+mtcars_sem_modelos = mtcars.drop(columns = ["model"])
+print("Base de dados sem os nomes dos modelos")
+print(mtcars_sem_modelos.head())
+print("Correlações")
+print(mtcars_sem_modelos.corr())
