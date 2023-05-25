@@ -7,14 +7,30 @@ def gen_linha(nome_arq):
             if i >= 4:
                 yield linha.strip().split('","')
 
+def converte_linha(nome_arq):
+
+    for linha in gen_linha(nome_arq):
+        linha_convertida = []
+        for coluna in linha:
+            try:
+                f = float(coluna)
+                if int(f) == f:
+                    linha_convertida.append(int(f))
+                else:
+                    linha_convertida.append(f)
+            except ValueError:
+                linha_convertida.append(coluna)
+        yield linha_convertida
+
 dados = gen_linha("dados.csv")
-print(os.chdir("maluquicie"))
-print(os.getcwd())
+os.chdir("maluquicie")
 
-print(next(dados))
+if __name__ == "__main__":
+    nome_arq = "dados.csv"
 
-# if __name__ == "__main__":
-#     nome_arq = "dados.csv"
+    lista_linhas = []
 
-#     for linha in converte_linha(nome_arq):
-#         print(linha)
+    for linha in converte_linha(nome_arq):
+        lista_linhas.append(linha)
+
+    print(f"São {len(linha)} linhas")

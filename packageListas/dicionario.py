@@ -16,9 +16,9 @@
 #     print('printando itens')
 #     for item in estados.items():
 #         print(item)
-    # for item in estados.items():
-    #     chave, valor = item
-    #     print(f"{chave} -> {valor}")
+# for item in estados.items():
+#     chave, valor = item
+#     print(f"{chave} -> {valor}")
 
 #     # adicionando item no dicionário
 #     novo_estado = dict()
@@ -34,7 +34,7 @@
 #     retirado = estados.pop('RJ')
 #     print(estados)
 #     print(retirado)
-    
+
 #     # se for dada uma chave que não existe e o segundo
 #     # argumento for None, a função não levanta
 #     retirado = estados.pop('AM', None)
@@ -42,7 +42,7 @@
 #     print(retirado)
 
 #     # deletando dicionario
-#     try: 
+#     try:
 #         del estados
 #         print(estados)
 #     except NameError:
@@ -50,7 +50,7 @@
 
 # rodandoDicionario()
 
-#==============================================================================================
+# ==============================================================================================
 
 cartao = {}
 cartao["Titular"] = "Marcelo Po"
@@ -89,8 +89,8 @@ for valor in cartao["Transacoes"]:
     print(valor)
 
 # acessando de forma segura por chave
-print(cartao.get("CVV"))# retorna o valor salvo na chave "CVV"
-print(cartao.get("Novachave"))# retorna None
+print(cartao.get("CVV"))  # retorna o valor salvo na chave "CVV"
+print(cartao.get("Novachave"))  # retorna None
 
 novo_dicionario = dict()
 novo_dicionario = "Da chave vazia"
@@ -100,7 +100,31 @@ print(cartao)
 new_set = {"A", "E", "I", "O", "U"}
 
 # new_dict = dict(new_set) -> nao funfa
-new_keys = (1,2, 3,4,5)
+new_keys = (1, 2, 3, 4, 5)
 
 new_dict = dict(zip(new_set, new_keys))
 print(new_dict)
+
+# dicionário aninhado
+dicionario_aninhado = {"Universidade": "FGV",
+                       "Escolas": {1: "EMAp", 2: "EBAPE", 3: "DIREITO RIO"}}
+print(dicionario_aninhado.values())
+
+# criando dicionario por lista de tuplas
+dicionario_criado_por_funcao = dict(
+    [
+        (1, "EMAp"),
+        (2, "EBAPE"),
+        (3, "DIREITO RIO")
+    ])
+
+print(dicionario_criado_por_funcao)
+
+try:
+    print(dicionario_aninhado["Escolas"][4])
+except KeyError:  # erro gerado quando a chave acessada não existe
+    print("Chave não existe")
+
+# o "in" verifica a existência de chave, não de valor
+print(1 in dicionario)
+sprint("EMAp" in dicionario)
