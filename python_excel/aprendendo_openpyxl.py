@@ -61,6 +61,33 @@ for linha, dado in enumerate(dados):
     for coluna, valor in enumerate(dado):
         folha_2.cell(row = linha + comeco[0], column = coluna + comeco[1]).value = valor
 
+from openpyxl.worksheet.table import Table
+
+# criando tabelas
+# da folha 1
+tabela_1 = Table(displayName = "tabela_1", ref = "A1:C5")
+folha_1.add_table(tabela_1)
+
+from openpyxl.utils import get_column_letter
+
+# da folha 2
+# sem usar string feita na mão
+letra_p_coluna = get_column_letter(folha_2.min_column)
+numero_p_linha = folha_2.min_row
+letra_u_coluna = get_column_letter(folha_2.max_column)
+numero_u_linha = folha_2.max_row
+
+range_tabela = letra_p_coluna + str(numero_p_linha) + ":" + letra_u_coluna + str(numero_u_linha)
+
+print(range_tabela)
+
+tabela_2 = Table(displayName = "tabela_2", ref = range_tabela)
+folha_2.add_table(tabela_2)
+
+# estilizando
+from openpyxl import styles as st
+
+fonte = st.Font(name = "Comic Sans", size = 15, blod = True, color = "FF0000")
 
 # salvando planilha
 planilha.save("monitoriazinha_cria.xlsx")
