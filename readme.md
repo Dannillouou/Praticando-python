@@ -18,20 +18,20 @@ Eu tente usar o pyenv por um tempo mas quando comecei a programar com notebooks 
 
 ### Pastas
 
-#### packages
+- #### packages
 Diretório com estudos sobre diversos tópicos
 
-#### packageListas
+- #### packageListas
 Diretório com estudos sobre tópicos específicos de estruturas de dados
 
-#### exercicios
+- #### exercicios
 Exercícios diversos
 
-#### python_excel
+- #### python_excel
 Manipulando planilhas excel com o python
 
-#### usando_pandas
+- #### usando_pandas
 Aprendendo como usar a library pandas
 
-#### tio_rafa
+- #### tio_rafa
 Aulas do grande Rafael Pinho
