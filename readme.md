@@ -8,14 +8,14 @@ O pyenv é um gerenciados de packages e de versões do python. Pelo que entendi 
 <a href="https://realpython.com/intro-to-pyenv/#what-about-a-package-manager">Esse site</a> explica melhor sobre o pyenv e como instalar. <br>
 <a href="https://github.com/pyenv-win/pyenv-win">Essa galerinha</a> do balacobaco colocou o pyenv funcionando no windows.
 
+Eu tente usar o pyenv por um tempo mas quando comecei a programar com notebooks tive problemas para usar o jupyter notebook com o python rodando no pyenv.
+
 ## Instalando poetry
 ### baixando arquivo py
 <a href="https://python-poetry.org/docs">site do poetry</a>
 
 ### adicionando poetry às variáveis de ambiente
-```
-set PATH=%PATH%;%USERPROFILE%\AppData\Roaming\pypoetry\venv\Scripts
-```
+
 ### Pastas
 
 #### packages
@@ -27,5 +27,11 @@ Diretório com estudos sobre tópicos específicos de estruturas de dados
 #### exercicios
 Exercícios diversos
 
-#### maluquicie
-Começo do que pode ser a leitura de dados em uma base em formato csv
+#### python_excel
+Manipulando planilhas excel com o python
+
+#### usando_pandas
+Aprendendo como usar a library pandas
+
+#### tio_rafa
+Aulas do grande Rafael Pinho
