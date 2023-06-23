@@ -18,20 +18,23 @@ Eu tente usar o pyenv por um tempo mas quando comecei a programar com notebooks 
 
 ### Pastas
 
-- #### packages
-Diretório com estudos sobre diversos tópicos
+- #### exercicios
+Exercícios diversos
+
+- #### monitorias
+Monitorias dos lendários Almir Fonseca e George Dutra (que eu não joguei na piscina)
 
 - #### packageListas
 Diretório com estudos sobre tópicos específicos de estruturas de dados
 
-- #### exercicios
-Exercícios diversos
+- #### packages
+Diretório com estudos sobre diversos tópicos
 
 - #### python_excel
 Manipulando planilhas excel com o python
 
-- #### usando_pandas
-Aprendendo como usar a library pandas
-
 - #### tio_rafa
 Aulas do grande Rafael Pinho
+
+- #### usando_pandas
+Aprendendo como usar a library pandas
