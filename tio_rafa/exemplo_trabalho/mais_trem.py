@@ -27,6 +27,9 @@ plot3 = figure(width = 240, height = 240, title = "Circle Square")
 plot3.square(x, y, size = 13, color = "SeaGreen", alpha = 0.42)
 plot3.add_layout(box_annotation)
 
+# organizando todos os plots numa grid
+# a grid é interpretada como uma matriz feita por
+# uma lista de listas
 plot = gridplot([[plot1, plot2], [None, plot3]])
 
 show(plot)
