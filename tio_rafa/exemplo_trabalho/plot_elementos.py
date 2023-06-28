@@ -1,10 +1,11 @@
 from bokeh.io import output_file, show
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource
-from organizando_dados import gas, liquid, solid
+from organizando_dados_elementos import gas, liquid, solid
 
 # fazendo os plots
-
+import os
+os.chdir("tio_rafa/exemplo_trabalho")
 output_file("periodic_table.html")
 
 # para gases
