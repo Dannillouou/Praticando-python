@@ -98,8 +98,5 @@ figure.ygrid.grid_line_color = "DeepPink"
 # figure.grid.grid_line_dash = [1, 42]# espaços, traços
 figure.grid.grid_line_dash = "dashdot"
 
-
-
-
 show(figure)
 # css zen garden
