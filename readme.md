@@ -28,4 +28,7 @@ Diretório com estudos sobre tópicos específicos de estruturas de dados
 Exercícios diversos
 
 #### maluquicie
-Começo do que pode ser a leitura de dados em uma base em formato csv
+Começo do que pode ser a leitura de dados em uma base em formato csv feito durante uma aula do Flávio Codeço Coelho
+
+#### monitorias
+Códigos feitos durante as monitorias de Introdução à Computação

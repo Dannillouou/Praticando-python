@@ -125,3 +125,6 @@ print("Base de dados sem os nomes dos modelos")
 print(mtcars_sem_modelos.head())
 print("Correlações")
 print(mtcars_sem_modelos.corr())
+
+print("Shape da base de dados")
+mtcars.shape()
