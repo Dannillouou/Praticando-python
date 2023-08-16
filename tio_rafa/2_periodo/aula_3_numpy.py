@@ -1,6 +1,7 @@
 import math
 import numpy as np
 import numpy.random as npr
+import matplotlib.pyplot as plt
 
 # Discutindo propriedades de numpy
 
@@ -181,3 +182,11 @@ print("Peak to peak observados: ", np.ptp(matriz_exercicio[1]))
 # Histograma
 hist_estimados = np.histogram(matriz_exercicio[0], bins = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1])
 hist_observados = np.histogram(matriz_exercicio[0], bins = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1])
+
+print("Histograma valores estimados: ", hist_estimados)
+print("Histograma valores observados: ", hist_observados)
+
+plt.hist(x = matriz_exercicio[0])
+plt.show()
+plt.hist(x = matriz_exercicio[1])
+plt.show()
