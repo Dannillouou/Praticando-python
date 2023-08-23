@@ -28,7 +28,7 @@ def juros_compostos(capital, taxa, tempo) -> tuple:
     ----------
     capital: int
         blá-blá-blá
-    taxa: int
+    taxa: float
         blá-blá-blá
     tempo: int
         blá-blá-blá
@@ -41,6 +41,7 @@ def juros_compostos(capital, taxa, tempo) -> tuple:
 
     # forma melhor de documentar
 
+    assert isinstance(taxa, float), "Taxa não é decimal, erro"
     montante = capital * (pow((1 + taxa / 100), tempo))
     juros = montante - capital
 
