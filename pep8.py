@@ -1,3 +1,9 @@
+# imports de diferentes bibliotecas devem ser em linhas diferentes
+import numpy
+import pandas
+# mas dois modulos dentro de uma biblioteca na mesma linha
+from subprocess import Popen, PIPE
+
 # Identacao: 4 espaços
 
 # Separamos argumentos do corpo da funcao com o dobro da indentação
@@ -52,4 +58,39 @@ income = (gross_wages
           - student_loan_interest)
 
 #=============================================================
-# blank lines
+# classes e funções importantes cercados por duas linhas vazias
+
+
+class ClasseImportante():
+    _importante = True
+    _atributo_1 = ""
+    _atributo_2 = 0
+    _atributo_3 = 3.14
+
+    def __init__(self) -> None:
+        pass
+
+
+def funcao_importante(coisa_importante) -> ClasseImportante:
+    classe_importante = ClasseImportante
+    return classe_importante
+
+
+# blocos de funcoes relacionadas devem ser separados por linhas vazias
+def funcao_aleatoria() -> None:
+    print("sou uma função")
+    print("faco coisas de funcoes")
+    
+    #linhas vazias cercando blocos logicos
+    if True:
+        print("A verdade nunca é mentira")
+funcao_aleatoria()
+
+# varias implementacoes sem muito sentido em linhas unicas ficam juntas
+print("print 1")
+print("print 2")
+print("print 3")
+x = 3
+y = 12.13
+
+#=============================================================
