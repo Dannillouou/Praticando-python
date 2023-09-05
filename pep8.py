@@ -1,9 +1,24 @@
+# imports
+# imports devem sempre estar no topo do codigo, seguindo a seuginte ordem:
+# 1. imports de bibliotecas base do python
+# 2. imports de terceiros relacionados
+# 3. imports especificos locais criados no programa
+# e entre cada grupo de imports deve haver uma linha vazia
+
 # imports de diferentes bibliotecas devem ser em linhas diferentes
 import numpy
 import pandas
 # mas dois modulos dentro de uma biblioteca na mesma linha
 from subprocess import Popen, PIPE
 
+# imports absolutos sao recomendados
+import mypkg.sibling
+from mypkg import sibling
+from mypkg.sibling import example
+
+# coringas ("*") devem ser evitados
+
+#================================================================================
 # Identacao: 4 espaços
 
 # Separamos argumentos do corpo da funcao com o dobro da indentação
@@ -94,3 +109,13 @@ x = 3
 y = 12.13
 
 #=============================================================
+# trailing commas:
+# virgulas ao fim de toda linha de uma estrutura de dados, de forma que
+# adicionar um valor ao fim da estrutura é igual a adicionar um valor no 
+# meio da mesma
+# exemplo:
+capitals = {
+    'China': 'Beijing',
+    'India': 'New Delhi',
+    'Mexico': 'Mexico City',
+}
