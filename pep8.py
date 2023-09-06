@@ -1,29 +1,37 @@
-# imports
-# imports devem sempre estar no topo do codigo, seguindo a seuginte ordem:
+"""Todo comentário deve ser escrito como um texto, seguindo normas de orto
+grafia e de gramática
+
+A não ser que haja 120% de certeza de que nenhuma pessoa que não fale a
+língua do programador irá ler o código, os comentários devem ser escritos
+em inglês
+"""
+
+# Imports
+# Imports devem sempre estar no topo do codigo, seguindo a seuginte ordem:
 # 1. imports de bibliotecas base do python
 # 2. imports de terceiros relacionados
 # 3. imports especificos locais criados no programa
-# e entre cada grupo de imports deve haver uma linha vazia
+# e entre cada grupo de imports deve haver uma linha vazia.
 
-# imports de diferentes bibliotecas devem ser em linhas diferentes
+# imports de diferentes bibliotecas devem ser em linhas diferentes.
 import numpy
 import pandas
-# mas dois modulos dentro de uma biblioteca na mesma linha
+# mas dois modulos dentro de uma biblioteca na mesma linha.
 from subprocess import Popen, PIPE
 
-# imports absolutos sao recomendados
+# imports absolutos sao recomendados.
 import mypkg.sibling
 from mypkg import sibling
 from mypkg.sibling import example
 
-# coringas ("*") devem ser evitados
+# coringas ("*") devem ser evitados.
 
 #================================================================================
 # Identacao: 4 espaços
 
 # Separamos argumentos do corpo da funcao com o dobro da indentação
 # para os argumentos. Muitos argumentos em um nome longo devem ser
-# separados em multiplas linhas, começando depois do nome da função
+# separados em multiplas linhas, começando depois do nome da .
 def funcao_com_nome_longo(
         argumento1, argumento2, 
         argumento3, argumento4):
@@ -34,13 +42,13 @@ def funcao_com_nome_longo(
 isso_eh_uma_coisa = True
 isso_eh_outra_coisa = True
 
-# indentação de if's
+# Indentação de if's.
 if (isso_eh_uma_coisa 
         and isso_eh_outra_coisa):
     print(isso_eh_uma_coisa)
 
 #=============================================================
-# indentacao de construtores
+# Indentacao de construtores.
 lista = [
     1, 2, 3,
     4, 5, 6,
@@ -59,13 +67,13 @@ Configuração no visual studio code:
 
 #=============================================================
 # em expressões muito longas de abertura de arquivos, podemos usar uma
-# barra para separar as diferentes expressões
+# barra para separar as diferentes expressões.
 with open('/path/to/some/file/you/want/to/read') as file_1, \
      open('/path/to/some/file/being/written', 'w') as file_2:
     file_2.write(file_1.read())
 
 #=============================================================
-# para vários operadores matemáticos de uma vez
+# para vários operadores matemáticos de uma vez.
 income = (gross_wages
           + taxable_interest
           + (dividends - qualified_dividends)
@@ -73,7 +81,7 @@ income = (gross_wages
           - student_loan_interest)
 
 #=============================================================
-# classes e funções importantes cercados por duas linhas vazias
+# classes e funções importantes cercados por duas linhas vazias.
 
 
 class ClasseImportante():
@@ -91,15 +99,21 @@ def funcao_importante(coisa_importante) -> ClasseImportante:
     return classe_importante
 
 
-# blocos de funcoes relacionadas devem ser separados por linhas vazias
+# Blocos de funcoes relacionadas devem ser separados por linhas vazias.
 def funcao_aleatoria() -> None:
     print("sou uma função")
     print("faco coisas de funcoes")
     
-    #linhas vazias cercando blocos logicos
+    # Linhas vazias cercando blocos logicos.
     if True:
         print("A verdade nunca é mentira")
 funcao_aleatoria()
+
+# Quando temos um anotação seguido de um valor default de um argumento, 
+# usamos espaços, mas quando temos apenas o valor default, não.
+def funcao_que_faz_coisa(input: QlqrString = None, limit=1):
+    for i in range(limit):
+        print(QlqrString)
 
 # varias implementacoes sem muito sentido em linhas unicas ficam juntas
 print("print 1")
@@ -119,3 +133,11 @@ capitals = {
     'India': 'New Delhi',
     'Mexico': 'Mexico City',
 }
+
+#=============================================================
+"""Docstrings
+
+Docstrings devem ser adicionadas em todas os módulos, funções, classes e 
+métodos públicos. Não são necessários para métodos não-públicos, mas deve
+haver um comentário sobre o que o método faz depois da linha "def"
+"""
