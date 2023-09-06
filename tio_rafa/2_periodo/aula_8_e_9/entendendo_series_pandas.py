@@ -82,7 +82,7 @@ print("\nILOC: ", serie_1.iloc[0:3], sep="\n")
 # forma de escrever numeros que so o python aceita
 # portanto, NAO USE
 dicionario_2 = {"I":10, "II":42, "III":7, "V":1_000_000}
-dicionario_3 = {"I":1, "II":12, "III":13, "V":0}
+dicionario_3 = {"I":1, "II":12, "III":13, "IV":0}
 
 serie_2 = pd.Series(dicionario_2)
 serie_3 = pd.Series(dicionario_3)
