@@ -1,5 +1,5 @@
 import pandas as pd
-from entendendo_series_pandas import serie_1, serie_2, serie_3
+from entendendo_series_panda import serie_1, serie_2, serie_3
 
 
 resultado = serie_2.add(serie_3)
