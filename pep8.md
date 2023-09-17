@@ -142,7 +142,7 @@ def funcao_que_faz_coisa(input: QlqrString = None, limit=1):
 ```		
 
 ### Trailing commas
-Virgulas ao fim de toda linha de uma estrutura de dados, de forma que adicionar um valor ao fim da estrutura éi gual a adicionar um valor no meio da mesma exemplo:
+Virgulas ao fim de toda linha de uma estrutura de dados, de forma que adicionar um valor ao fim da estrutura é igual a adicionar um valor no meio da mesma, exemplo:
 ```python
 capitals = {
     'China': 'Beijing',
