@@ -75,5 +75,34 @@ print(df[df["Nota"] > 8]["Temporadas"])
 print(df[df["Nota"] > 8][["Temporadas", "Episódios"]])
 
 print(df[(df["Nota"] > 8) & (df["Temporadas"]>3)]) 
-print("Hello world")
+
+#=========================================================================
+print("##### MULTI-INDEX #####")
+
+plataforma = ["HBO", "HBO", "Netflix", "Netflix"]
+lancamento = [2020, 2021, 2020, 2021]
+indices = pd.MultiIndex.from_arrays([plataforma, lancamento], names=("Plataforma", "Lançamento"))
+print("\n\nIndices: ")
+print(indices)
+
+print("\nSem Índice: ")
+df.reset_index(inplace=True)
 print(df)
+
+print("\nRenomear Índice: ")
+df.rename(columns={"index":"Nome"}, inplace=True)
+print(df)
+
+print("\nConfigurar Índice: ")
+df.set_index(indices, inplace=True)
+print(df)
+
+print("\nSeleção Multi-Index: ")
+print(df.loc["HBO"].loc[2021])
+
+print("\nCross Selection 1: ")
+print(df.xs("HBO"))
+
+print("\nCross Selection 3: ")
+# Selecionando índice da direita pra esquerda>
+print(df.xs(2020, level="Lançamento"))
