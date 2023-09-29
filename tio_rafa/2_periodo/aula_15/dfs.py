@@ -11,13 +11,13 @@ df = pd.DataFrame(dados, index=indices, columns=colunas)
 print(df, end="\n\n")
 
 #=========================================================================
-print("##### Seleção #####")
+print("\n\n##### Seleção #####")
 print("Notas: ")
 print(df["Nota"], end="\n\n")
 print(df[["Temporadas", "Episódios"]], end="\n\n")
 
 #=========================================================================
-print("##### Loc ILOC #####")
+print("\n\n##### Loc ILOC #####")
 print("Lost: ")
 # localizador por rotulo
 print(df.loc["Lost"], end="\n\n") 
@@ -25,7 +25,7 @@ print(df.loc["Lost"], end="\n\n")
 print(df.iloc[0], end="\n\n") 
 
 #=========================================================================
-print("##### Seleção combinada #####")
+print("\n\n##### Seleção combinada #####")
 # buscando uma lista de indices
 print(df.loc[["The Pacific", "NCIS"], "Temporadas"], end="\n\n")
 # buscando tempradas e nota para todos os índices
@@ -59,7 +59,7 @@ print(df, end="\n\n")
 print(df.shape)# (4, 3)
 
 #=========================================================================
-print("##### SELEÇÃO CONDICIONAL #####")
+print("\n\n##### SELEÇÃO CONDICIONAL #####")
 
 print(df[df["Nota"] > 8])
 # coloca True em todos os dados do df maiores que 3
@@ -67,7 +67,7 @@ print(df>3)
 print(df[df>3]) # os valores menores que 3 fica como NaN
 
 #=========================================================================
-print("##### SELEÇÃO CONDICIONAL + MÚLTIPLA #####")
+print("\n\n##### SELEÇÃO CONDICIONAL + MÚLTIPLA #####")
 
 # temporadas das séries com nota acima de 8
 print(df[df["Nota"] > 8]["Temporadas"]) 
@@ -77,7 +77,7 @@ print(df[df["Nota"] > 8][["Temporadas", "Episódios"]])
 print(df[(df["Nota"] > 8) & (df["Temporadas"]>3)]) 
 
 #=========================================================================
-print("##### MULTI-INDEX #####")
+print("\n\n##### MULTI-INDEX #####")
 
 plataforma = ["HBO", "HBO", "Netflix", "Netflix"]
 lancamento = [2020, 2021, 2020, 2021]
@@ -106,3 +106,38 @@ print(df.xs("HBO"))
 print("\nCross Selection 3: ")
 # Selecionando índice da direita pra esquerda>
 print(df.xs(2020, level="Lançamento"))
+
+#=========================================================================
+print("\n\n##### OPERAÇÕES #####")
+
+print("Unique ", df["Nota"].unique())# notas únicas
+print("Nunique ", df["Nota"].unique())
+print("Count ", df["Nota"].count())
+
+df.at[("HBO", 2020), "Nota"]
+
+#=========================================================================
+print("\n\n##### OPERAÇÕES AGREGADAS #####")
+
+print("Min: ", df["Nota"].min())
+print("Max: ", df["Nota"].max())
+print("Median: ", df["Nota"].median())
+print("Var: ", df["Nota"].var())
+
+#=========================================================================
+print("\n\n##### DROP & FILL #####")
+
+indices = ["Aluno 1", "Aluno 2", "Aluno 3"]
+colunas = ["Nome", "Altura", "Sono Médio"]
+dados = [["Giovanna Grossi", 173, 7], ["Uriel Liann", 180, np.nan], ["Pedro Tokar", 182, 6]]
+alunos = pd.DataFrame(dados, index=indices, columns=colunas)
+print(alunos)
+
+print("Is Null: ", alunos.isnull(), sep="\n")
+print("\nIs Null: ", alunos["Sono Médio"].isnull(), sep="\n")
+
+print("Null: ", alunos[alunos.isnull()], sep="\n")
+print("\nNull: ", alunos[alunos["Sono Médio"].isnull()], sep="\n")
+
+alunos.dropna(thresh=2, inplace=True)# se a linha tem mais que 2 NaN, dropa a linha
+print(alunos)
