@@ -11,6 +11,10 @@ class Student:
         self.major = major
         Student.total_students += 1
 
+    @staticmethod
+    def total_students_count():
+        return Student.total_students
+
     def study(self, subject) -> str:
         return f"{self.name} is studying {subject}."
     
@@ -44,6 +48,10 @@ class UndergraduateStudent(Student):
         super().__init__(name, student_id, major)
         self.year = year
 
+    @staticmethod
+    def is_freshman(year):
+        return year == 1
+    
     def attend_lecture(self, course):
         return f"{self.name} is attending to a {course} lecture."
     
@@ -52,7 +60,7 @@ class UndergraduateStudent(Student):
 
     def procrastinate(self):
         return f"{self.name} is procrastinating instead of studying!"
-    
+        
 class MathStudent(UndergraduateStudent):
 
     def __init__(self, name: str, student_id: int, year: int, specialization: str) -> None:
@@ -65,10 +73,35 @@ class MathStudent(UndergraduateStudent):
 # creating instances
 base_student = Student("Uriel Liann", "S12345", "MAp")
 grad_student = GraduateStudent("Jeann Rocha", "S12346", "MAp", "Topology")
-undergrad_student = UndergraduateStudent("Sillas Rocha", "S12347", "CdD")
+undergrad_student = UndergraduateStudent("Sillas Rocha", "S12347", "CdD", 2023)
 math_student = MathStudent("Mariana Rocha", "M12345", 2023, "Linear Algebra")
 
-# demonstrating cuntions
+# demonstrating functionality
 print(base_student.study("Math"))
 print(grad_student.study("Math"))
-print(undergrad_student.)
+print(undergrad_student.study("Math"))
+print(math_student.study("Math"))
+
+print(grad_student.research())
+print(undergrad_student.attend_lecture("Prog. Lang."))
+print(undergrad_student.procrastinate())
+print(math_student.solve_math_problem("Ex. 3, pg. 7."))
+
+print(base_student.get_student_info())
+print(grad_student.get_student_info())
+print(undergrad_student.get_student_info())
+print(math_student.get_student_info())
+
+print(base_student.party())
+print(grad_student.party())
+print(undergrad_student.party())
+print(math_student.party())
+
+print(base_student.drink("Tequila"))
+print(grad_student.drink("51"))
+print(undergrad_student.drink("..."))
+print(math_student.drink("Water"))
+
+# Access static methods and attributes
+print(f"Total Students: {Student.total_students_count()}")
+print(UndergraduateStudent.is_freshman(undergrad_student.year))
