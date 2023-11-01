@@ -19,7 +19,7 @@ class Point2D():
 
 		Parameters
 			x (int): posição no eixo x
-			y (int): posição no eixo y
+			cdcdy (int): posição no eixo y
 		"""
 		self.x = x
 		self.y = y
